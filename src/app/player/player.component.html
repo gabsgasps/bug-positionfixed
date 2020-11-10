@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar> </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-img
+      class="thumb"
+      src="https://jovemnerd.com.br/wp-content/uploads/2020/11/NC_750_melhor-de-50-NC_3000x3000.jpg"
+      alt="NerdCast 750 - O Melhor de 750 Nerdcasts"
+    ></ion-img>
+
+    <div class="player-container">
+      <audio
+        #player
+        class="ion-hide"
+        src="https://nerdcast.jovemnerd.com.br/nerdcast_750_melhores750.mp3"
+      ></audio>
+      <!-- control bar -->
+
+      <ion-range min="0"></ion-range>
+
+      <div class="display-info">
+        <span class="info">00</span>
+        <span class="info">000</span>
+      </div>
+
+      <ion-buttons mode="md" class="ion-justify-content-center">
+        <ion-button class="action-buttons">
+          <ion-icon name="play-skip-back-sharp" slot="icon-only"></ion-icon>
+        </ion-button>
+
+        <ion-button class="action-buttons -play">
+          <ion-icon
+            [name]="isPlaying ? 'pause-sharp' : 'play-sharp'"
+            slot="icon-only"
+          ></ion-icon>
+        </ion-button>
+
+        <ion-button class="action-buttons">
+          <ion-icon name="play-skip-forward-sharp" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,55 @@
+.player-container {
+  & {
+    padding: 1rem 1rem 2rem;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  ion-range {
+    --height: 1rem;
+    padding: 0;
+    --bar-background: #ebebeb;
+    --knob-size: 0.8rem;
+    --color: black;
+    --bar-background-active: black;
+  }
+
+  .display-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+
+    > .info {
+      font-size: 14px;
+    }
+  }
+  .action-buttons {
+    --color: #707070;
+    --padding-bottom: 1rem;
+    --padding-end: 1rem;
+    --padding-start: 1rem;
+    --padding-top: 1rem;
+
+    &.-pause,
+    &.-play {
+      --background: #707070;
+      --color: white;
+      --color-activated: white;
+      margin: 0 1rem;
+    }
+  }
+}
+
+.thumb {
+  width: 100%;
+  margin: auto;
+  object-fit: cover;
+}
+
+ion-content {
+  --padding-bottom: 300px;
+}
